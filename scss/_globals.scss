@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $light-grayish-cyan1;
+}
+
+body,
+input,
+button {
+	font-family: 'Space Mono', monospace;
+	font-weight: 700;
+}
+
+//media queries
+@mixin for-size($size) {
+	@if $size == phone-and-tablet {
+		@media screen and (max-width: 57em) {
+			@content;
+		}
+	} @else if $size == desktop {
+		@media screen and (min-width: 57.5em) {
+			@content;
+		}
+	}
+}
