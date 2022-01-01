@@ -1,6 +1,15 @@
 @import 'variables';
 @import 'globals';
 
+body{
+	@include for-size(desktop){
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
 //logo
 .logo{
 	display: block;
